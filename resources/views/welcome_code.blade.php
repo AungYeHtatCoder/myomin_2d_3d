@@ -1,13 +1,4 @@
 <x-layout>
-  <div class="container overflow-hidden">
-    <div class="col-lg-6 col-md-10 mx-auto">
-      <div class="row g-md-2">
-        <x-navbar />
-        <div class="main-content position-relative overflow-hidden z-3">
-          <!-- side bar  -->
-          <x-sidebar />
-          <!-- side bar  -->
-
           <!-- Subnav -->
           <div class="my-5">
             <h4 class="text-center text-white my-3">မိတ်ဆက် ကုဒ်ကို ရယူရန် Agent ဖြင့်ဆက်သွယ်ပါ။</h4>
@@ -38,12 +29,4 @@
             <span class="text-warning">* အကောင့်လုံခြုံမူရှိစေရန် သင်၏ လျှို့ဝှတ်နံပါတ်ကို မည်သူ့ကိုမျှမပြောပါနဲ့။
               *</span>
           </div>
-        </div>
-        <!-- footer  -->
-        <x-footer />
-        <!-- footer  -->
-      </div>
-    </div>
-  </div>
-
   </x-layout>

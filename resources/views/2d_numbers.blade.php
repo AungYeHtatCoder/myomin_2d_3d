@@ -3,23 +3,7 @@
     <div class="col-lg-6 col-md-10 mx-auto">
       <div class="row g-md-2">
         <!-- nav bar  -->
-        <nav class="navbar navbar-expand-lg text-white p-3" data-bs-theme="dark">
-          <div class="container d-flex flex-row justify-content-between align-items-center">
-            <div>
-              <a class="navbar-brand" href="#">
-                <img src="../asset/img/bars.svg" alt="" id="hamburgerMenu">
-              </a>
-            </div>
-            <div class="pt-2">
-              <h2>2D | 3D</h2>
-            </div>
-            <div>
-              <a class="navbar-brand" href="#">
-                <img src="../asset/img/refresh.svg" alt="">
-              </a>
-            </div>
-          </div>
-        </nav>
+        <x-navbar />
         <!-- nav bar  -->
         <!-- content  -->
         <div class="main-content position-relative overflow-hidden z-3">
