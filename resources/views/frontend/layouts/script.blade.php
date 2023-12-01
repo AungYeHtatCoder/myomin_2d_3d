@@ -1,39 +1,17 @@
-const myCarouselElement = document.querySelector("#myCarousel");
-
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 3000,
-  touch: true
-});
-carousel.cycle();
-
-document.addEventListener("DOMContentLoaded", function() {
+<script src="{{ asset('./bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('./bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('./bootstrap/js/popper.min.js') }}"></script>
+<script src="{{ asset('./script.js') }}" type="text/javascript"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
   const hamburgerMenu = document.getElementById("hamburgerMenu");
-  const container = document.container;
+  const body = document.body;
 
   hamburgerMenu.addEventListener("click", function() {
-    container.classList.toggle("show-sidebar");
+    body.classList.toggle("show-sidebar");
   });
 });
-
-function quickPickupNumbers() {
-  const quick_pickup_numbers = document.querySelector(".quick_pickup_numbers");
-  quick_pickup_numbers.classList.toggle("active");
-}
-
-function selectedNumbers() {
-  const formContainer = document.querySelector(".form-container");
-  formContainer.classList.toggle("active");
-}
-
-function closeQuickPickupForm() {
-  const quick_pickup_numbers = document.querySelector(".quick_pickup_numbers");
-  quick_pickup_numbers.classList.remove("active");
-}
-
-function closeForm() {
-  const formContainer = document.querySelector(".form-container");
-  formContainer.classList.remove("active");
-}
+</script>
 
 (function() {
   const fetchData = () => {

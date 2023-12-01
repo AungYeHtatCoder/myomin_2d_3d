@@ -1,39 +1,46 @@
-const myCarouselElement = document.querySelector("#myCarousel");
+<!DOCTYPE html>
+<html lang="en">
 
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 3000,
-  touch: true
-});
-carousel.cycle();
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D 3D Demo Project</title>
+  <link href="{{ asset('./bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ asset('./style.css') }}">
+</head>
 
-document.addEventListener("DOMContentLoaded", function() {
+<body>
+  <div class="container overflow-hidden h-100">
+    <div class="col-lg-6 col-md-10 mx-auto">
+      <div class="row g-md-2">
+        <!-- nav bar  -->
+        @include('frontend.layouts.navbar')
+        <!-- nav bar  -->
+        <!-- content  -->
+        <div class="main-content position-relative overflow-hidden z-3">
+          <!-- side bar  -->
+          @include('frontend.layouts.sidebar')
+          <!-- side bar  -->
+          @yield('content')
+        </div>
+        @include('frontend.layouts.footer')
+      </div>
+    </div>
+  </div>
+
+ <script src="{{ asset('./bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('./bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('./bootstrap/js/popper.min.js') }}"></script>
+<script src="{{ asset('./script.js') }}" type="text/javascript"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
   const hamburgerMenu = document.getElementById("hamburgerMenu");
-  const container = document.container;
+  const body = document.body;
 
   hamburgerMenu.addEventListener("click", function() {
-    container.classList.toggle("show-sidebar");
+    body.classList.toggle("show-sidebar");
   });
 });
-
-function quickPickupNumbers() {
-  const quick_pickup_numbers = document.querySelector(".quick_pickup_numbers");
-  quick_pickup_numbers.classList.toggle("active");
-}
-
-function selectedNumbers() {
-  const formContainer = document.querySelector(".form-container");
-  formContainer.classList.toggle("active");
-}
-
-function closeQuickPickupForm() {
-  const quick_pickup_numbers = document.querySelector(".quick_pickup_numbers");
-  quick_pickup_numbers.classList.remove("active");
-}
-
-function closeForm() {
-  const formContainer = document.querySelector(".form-container");
-  formContainer.classList.remove("active");
-}
 
 (function() {
   const fetchData = () => {
@@ -102,3 +109,6 @@ function closeForm() {
 
   setInterval(fetchData, 1000);
 })();
+</script>
+</body>
+</html>

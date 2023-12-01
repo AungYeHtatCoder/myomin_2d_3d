@@ -9,9 +9,12 @@
 }
 
 body {
+  width: 100%;
+  height: auto;
   background: var(--background-color);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 
 .navbar {
   background: var(--navbar-color);
@@ -21,6 +24,7 @@ body {
   position: absolute;
   top: 0;
   left: -100%;
+  z-index: 99;
   width: auto;
   height: 100%;
   background-color: #333;
@@ -28,15 +32,21 @@ body {
 }
 
 .main-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin-left: 0;
   transition: margin-left 0.3s ease-in-out;
 }
 
 .show-sidebar .sidebar {
   left: 0;
+  z-index: 99;
 }
 
-.show-sidebar ul li {
+.show-sidebar .sidebar-list .sidebar-list-item {
   background: var(--sidebar-menu-color);
 }
 
@@ -111,4 +121,12 @@ body {
   font-size: 20px;
   cursor: pointer;
   padding: 5px;
+}
+
+.footer{
+  width: 100%;
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }

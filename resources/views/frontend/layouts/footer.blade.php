@@ -1,5 +1,5 @@
-<div class="mt-3 py-3 rounded-top-4 mx-auto info-card">
-          <div class="list-group d-flex flex-row flex-wrap justify-content-between align-items-center">
+<div class="w-100 mt-3 mb-0 py-3 rounded-top-4 mx-auto info-card">
+          <div class="footer">
             <div class="bg-transparent border-0 col-md-2 mb-3">
               <a href="/"
                 class="text-white text-decoration-none d-flex flex-column justify-content-center align-items-center">
@@ -28,7 +28,7 @@
               </a>
             </div>
             <div class="bg-transparent border-0 col-md-2 mb-3">
-              <a href="/profile" class="text-white text-decoration-none d-flex flex-column justify-content-center align-items-center">
+              <a href="/user-profile" class="text-white text-decoration-none d-flex flex-column justify-content-center align-items-center">
                 <div>
                   <img src="{{ asset('./assets/img/profile.svg') }}" class="img-fluid rounded-top" alt="">
                 </div>
