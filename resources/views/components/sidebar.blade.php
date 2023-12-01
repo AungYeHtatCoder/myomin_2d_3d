@@ -22,13 +22,13 @@
                 </a>
             </li>
             <li class="list-group-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
-                <a href="#!" class="text-decoration-none text-white">
+                <a href="/2d-result" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/numbers.svg') }}" class="img-fluid" alt="">
                     ထီထွက်ဂဏန်းများ
                 </a>
             </li>
             <li class="list-group-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
-                <a href="#!" class="text-decoration-none text-white">
+                <a href="/2d-history" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/numbers.svg') }}" class="img-fluid" alt="">
                     ထီထိုးမှတ်တမ်း
                 </a>
