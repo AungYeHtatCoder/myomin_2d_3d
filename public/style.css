@@ -1,0 +1,114 @@
+:root {
+  --background-color: linear-gradient(180deg, rgba(3, 29, 3, 1) 0%, rgba(34, 100, 36, 1) 100%, rgba(0, 0, 0, 1) 100%);
+
+  --sidebar-menu-color: radial-gradient(circle, rgba(43, 142, 38, 0.7030461842940301) 0%, rgba(46, 80, 52, 1) 100%);
+
+  --navbar-color: radial-gradient(circle, rgba(19, 83, 22, 1) 0%, rgba(35, 136, 51, 1) 59%);
+
+  --card-color: radial-gradient(circle, rgba(43, 142, 38, 0.7030461842940301) 0%, rgba(46, 80, 52, 1) 100%);
+}
+
+body {
+  background: var(--background-color);
+}
+
+
+.navbar {
+  background: var(--navbar-color);
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: auto;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s ease-in-out;
+}
+
+.main-content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.show-sidebar .sidebar {
+  left: 0;
+}
+
+.show-sidebar ul li {
+  background: var(--sidebar-menu-color);
+}
+
+.info-card {
+  background: var(--card-color);
+}
+
+.quick_numbers {
+  position: fixed;
+  left: 40%;
+  bottom: 14%;
+  transform: translate(-50%, 50%);
+}
+
+.selected_numbers {
+  position: fixed;
+  left: 60%;
+  bottom: 14%;
+  transform: translate(-50%, 50%);
+}
+
+
+.quick_pickup_numbers {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+  position: fixed;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+  position: fixed;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quick_pickup_numbers.active {
+  height: 80%;
+}
+
+.form-container.active {
+  height: 80%;
+}
+
+.quick-nubers-pickup-form-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}

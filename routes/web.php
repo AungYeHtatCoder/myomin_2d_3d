@@ -30,7 +30,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/user-profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('home');
 
-Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
+// Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['auth']], function () {
 
@@ -217,5 +217,65 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
     Write here Client Side Auth Routes
     **********
     */
-  
+
+});
+
+Route::get('/',function(){
+  return view('index');
+});
+
+Route::get('/2d-3d-lottery-play',function(){
+  return view('2d_3d_lottery_play');
+});
+
+Route::get('/2d-numbers',function(){
+  return view('2d_numbers');
+});
+
+Route::get('/forget-password',function(){
+  return view('forget_password');
+});
+
+Route::get('/login',function(){
+  return view('login');
+});
+
+Route::get('/register',function(){
+  return view('register');
+});
+
+Route::get('/deposit',function(){
+  return view('deposit');
+});
+
+Route::get('/3d-history',function(){
+  return view('3d_history');
+});
+
+Route::get('/3d-result',function(){
+  return view('3d_result');
+});
+
+Route::get('/2d-history',function(){
+  return view('2d_history');
+});
+
+Route::get('/2d-result',function(){
+  return view('2d_result');
+});
+
+Route::get('/profile',function(){
+  return view('profile');
+});
+
+Route::get('/promotion',function(){
+  return view('promotion');
+});
+
+Route::get('/wallet',function(){
+  return view('wallet');
+});
+
+Route::get('/welcome-code',function(){
+  return view('welcome_code');
 });
