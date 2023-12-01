@@ -1,15 +1,4 @@
 <x-layout>
-  <div class="container overflow-hidden">
-    <div class="col-lg-6 col-md-10 mx-auto">
-      <div class="row g-md-2">
-        <!-- nav bar  -->
-        <x-navbar />
-        <!-- nav bar  -->
-        <div class="main-content position-relative overflow-hidden z-3 g-3">
-          <!-- side bar  -->
-          <x-sidebar />
-          <!-- side bar  -->
-
           <!-- Subnav -->
           <div class="d-flex flex-column justify-content-between">
             <h4 class="text-center text-white my-3">အကောင့်ဝင်ရန်</h4>
@@ -46,12 +35,4 @@
             <span class="text-warning mb-5">* အကောင့်လုံခြုံမူရှိစေရန် သင်၏ လျှို့ဝှတ်နံပါတ်ကို မည်သူ့ကိုမျှမပြောပါနဲ့။
               *</span>
           </div>
-        </div>
-        <!-- footer  -->
-        <x-footer />
-        <!-- footer  -->
-      </div>
-    </div>
-  </div>
-
-</x-layout>
+        </x-layout>

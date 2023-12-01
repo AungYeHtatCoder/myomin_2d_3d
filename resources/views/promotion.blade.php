@@ -1,14 +1,4 @@
 <x-layout>
-  <div class="container overflow-hidden">
-    <div class="col-lg-6 col-md-10 mx-auto">
-      <div class="row g-md-2">
-        {{-- nav bar  --}}
-        <x-navbar />
-        {{-- nav bar  --}}
-        <div class="main-content position-relative overflow-hidden z-3">
-          <!-- side bar  -->
-          <x-sidebar />
-          <!-- side bar  -->
           <!-- content  -->
           <div>
             <div class="d-flex flex-column mt-4">
@@ -62,12 +52,5 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- footer  -->
-        <x-footer />
-        <!-- footer  -->
-      </div>
-    </div>
-  </div>
 
 </x-layout>

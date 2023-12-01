@@ -1,12 +1,4 @@
 <x-layout>
-  <div class="container overflow-hidden">
-    <div class="col-lg-6 col-md-10 mx-auto">
-      <div class="row g-md-2">
-        <x-navbar />
-        <div class="main-content position-relative overflow-hidden z-3">
-          <!-- side bar  -->
-          <x-sidebar />
-          <!-- side bar  -->
 
           <!-- Subnav -->
           <div class="d-flex justify-content-around text-white shadow rounded-4 py-4 mb-4">
@@ -36,11 +28,4 @@
           <!-- 2D lists -->
           <div class="row" style="margin-bottom: 80px;" id="result"></div>
         </div>
-        <!-- footer  -->
-        <x-footer />
-        <!-- footer  -->
-      </div>
-    </div>
-  </div>
-
   </x-layout>
