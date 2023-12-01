@@ -11,6 +11,7 @@
     body.classList.toggle("show-sidebar");
   });
 });
+<<<<<<< HEAD
 </script>
 
 (function() {
@@ -80,3 +81,6 @@
 
   setInterval(fetchData, 1000);
 })();
+=======
+</script>
+>>>>>>> myomin

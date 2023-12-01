@@ -60,7 +60,6 @@ class WelcomeController extends Controller
     {
 
         return view('frontend.index');
-
         // $banners = Banner::latest()->take(3)->get();
         // //$twoDigits = TwoDigit::all();
         // $client = new Client();
@@ -77,68 +76,6 @@ class WelcomeController extends Controller
         // }
 
         // return view('welcome', compact('data', 'banners'));
-    }
-
-    public function register()
-    {
-        return view('frontend.register');
-    }
-
-    public function store()
-    {
-        $formData = request()->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'phone' => 'required|min:8|max:15',
-            'password' => 'required|string|min:6',
-        ]);
-
-        $user = User::create([
-            'name' => $formData['name'],
-            'email' => $formData['email'],
-            'phone' => $formData['phone'],
-            'password' => bcrypt($formData['password']),
-        ]);
-
-        if ($user) {
-            Auth::login($user);
-            return redirect('/home')->with('success', 'Logged In Successful.');
-        } else {
-            return redirect()->back()->with('error', 'Registration failed. Please try again.');
-        }
-    }
-
-    public function login()
-    {
-        return view('frontend.login');
-    }
-
-    public function userLogin(Request $request)
-{
-    $validatedData = $request->validate([
-        'credential' => 'required',
-        'password' => 'required',
-    ]);
-
-    $user = User::where(function ($query) use ($validatedData) {
-        $query->where('email', $validatedData['credential'])
-            ->orWhere('phone', $validatedData['credential']);
-    })->first();
-
-    if ($user && Hash::check($validatedData['password'], $user->password)) {
-        Auth::login($user);
-        return redirect('/home');
-    }
-
-    return redirect()->back()->withInput()->withErrors(['credential' => 'Invalid credentials']);
-}
-
-
-    public function logout()
-    {
-        auth()->logout();
-
-        return redirect('/');
     }
 
     public function wallet()
@@ -448,6 +385,64 @@ class WelcomeController extends Controller
     public function userFillMoney()
     {
         return view('user_fillmoney');
+    }
+
+    public function store(Request $request)
+    {
+        $data = request()->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|min:11|max:15',
+            'password'=>'required'
+        ]);
+
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'password' => bcrypt($data['password']),
+        ]);
+
+        if ($user) {
+            Auth::login($user);
+            return redirect('/home')->with('success', 'Logged In Successful.');
+        } else {
+            return redirect()->back()->with('error', 'Registration failed. Please try again.');
+        }
+    }
+
+    public function login()
+    {
+        return view('frontend.user-login');
+    }
+
+    public function userLogin(Request $request)
+    {
+        $credentials = $request->validate([
+            'credential' => 'required',
+            'password' => 'required',
+        ]);
+
+        $user = User::where(function ($query) use ($credentials) {
+            $query->where('email', $credentials['credential'])
+                ->orWhere('phone', $credentials['credential']);
+        })->first();
+
+        if ($user && Hash::check($credentials['password'], $user->password)) {
+            // The passwords match, log in the user
+            Auth::login($user);
+            return redirect('/home');
+        }
+
+        // Invalid credentials, redirect back with errors
+        return redirect()->back()->withInput()->withErrors(['credential' => 'Invalid credentials']);
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        return redirect('/');
     }
 
 

@@ -28,9 +28,9 @@ use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [WelcomeController::class, 'index'])->name('index');
-Route::get('/wallet', [WelcomeController::class, 'wallet'])->middleware('auth')->name('wallet');
-Route::get('/user-profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('home');
+Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/user-profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('home');
+Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->middleware('auth')->name('wallet');
 
 // Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
 
@@ -222,26 +222,29 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
 
 });
 
+Route::get('/login', [WelcomeController::class, 'login'])->name('login');
+Route::post('/user/login/form/submit', [WelcomeController::class, 'userlogin'])->name('user.login.form.submit');
+
+Route::get('/register', [WelcomeController::class, 'register'])->name('register');
+Route::post('/user/register/form/submit', [WelcomeController::class, 'store'])->name('user.register.form.submit');
+
+Route::post('/user/logout', [WelcomeController::class, 'logout'])->name('user.logout');
+
 Route::get('/2d-3d-lottery-play',function(){
-  return view('2d_3d_lottery_play');
+  return view('frontend.2d_3d_lottery_play');
 });
 
 Route::get('/2d-numbers',function(){
-  return view('2d_numbers');
+  return view('frontend.2d_numbers');
 });
 
 Route::get('/forget-password',function(){
-  return view('forget_password');
+  return view('frontend.forget_password');
 });
 
-Route::get('/login',[WelcomeController::class,'login'])->middleware('guest')->name('login');
-Route::post('/user/login/form/submit',[WelcomeController::class,'userLogin'])->name('user.login.form.submit');
-
-
-Route::get('/register',[WelcomeController::class,'register'])->middleware('guest')->name('register');
-Route::post('/user/register/form/submit',[WelcomeController::class,'store'])->name('user.register.form.submit');
-
-Route::post('/user/logout',[WelcomeController::class,'logout'])->name('user.logout');
+Route::get('/register',function(){
+  return view('frontend.register');
+});
 
 Route::get('/deposit',function(){
   return view('frontend.deposit');
@@ -251,8 +254,8 @@ Route::get('/3d-history',function(){
   return view('frontend.3d_history');
 });
 
-Route::get('/3d-result',function(){
-  return view('frontend.3d_result');
+Route::get('/winners',function(){
+  return view('frontend.winners');
 });
 
 Route::get('/2d-history',function(){
@@ -263,24 +266,8 @@ Route::get('/2d-result',function(){
   return view('frontend.2d_result');
 });
 
-Route::get('/2d-3d-lottery-play',function(){
-  return view('frontend.2d_3d_lottery_play');
-});
-
 Route::get('/promotion',function(){
   return view('frontend.promotion');
-});
-
-Route::get('/winners',function(){
-  return view('frontend.winners');
-});
-
-Route::get('/2d-numbers',function(){
-  return view('frontend.2d_numbers');
-});
-
-Route::get('/2d-selected-numbers',function(){
-  return view('frontend.2d_selected_numbers');
 });
 
 Route::get('/welcome-code',function(){

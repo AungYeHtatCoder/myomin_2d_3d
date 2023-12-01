@@ -27,6 +27,7 @@ body {
   z-index: 99;
   width: auto;
   height: 100%;
+  z-index: 100;
   background-color: #333;
   transition: left 0.3s ease-in-out;
 }
@@ -43,11 +44,12 @@ body {
 
 .show-sidebar .sidebar {
   left: 0;
-  z-index: 99;
+  z-index: 100;
 }
 
 .show-sidebar .sidebar-list .sidebar-list-item {
   background: var(--sidebar-menu-color);
+  z-index: 100;
 }
 
 .info-card {
@@ -123,10 +125,10 @@ body {
   padding: 5px;
 }
 
-.footer{
+.footer {
   width: 100%;
 
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }

@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
     <div>
         <div id="myCarousel" class="carousel slide z-n1" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -61,7 +62,7 @@
             </div>
         </div>
     </div>
-    <div class="my-3 p-3 text-center text-white bg-primary rounded-3 info-card">
+    <div class="w-100 my-3 p-3 text-center text-white bg-primary rounded-3 info-card">
         <div class="d-flex flex-row justify-content-between">
             <h3 class="text-warning">Modern</h3>
             <h3 class="text-warning">Internet</h3>
@@ -141,4 +142,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+@endsection

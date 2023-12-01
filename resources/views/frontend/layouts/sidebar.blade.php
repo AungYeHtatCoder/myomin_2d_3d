@@ -9,53 +9,52 @@
             </div>
         </div>
         <ul class="list-group sidebar-list">
-            <li class="list-group-item sidebar-list-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="/" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/home.svg') }}" class="img-fluid" alt="">
                     ပင်မစာမျက်နှာ
                 </a>
             </li>
-            <li class="list-group-item sidebar-list-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
-                <a href="#!" class="text-decoration-none text-white">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
+                <a href="/winners" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/winners.svg') }}" class="img-fluid" alt="">
                     ကံထူးရှင်များ
                 </a>
             </li>
-            <li class="list-group-item sidebar-list-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="/2d-result" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/numbers.svg') }}" class="img-fluid" alt="">
                     ထီထွက်ဂဏန်းများ
                 </a>
             </li>
-            <li class="list-group-item sidebar-list-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="/2d-history" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/numbers.svg') }}" class="img-fluid" alt="">
                     ထီထိုးမှတ်တမ်း
                 </a>
             </li>
-            <li class="list-group-item sidebar-list-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="#!" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/account_wallet.svg') }}" class="img-fluid" alt="">
                     ဘဏ်အကောင့်များ
                 </a>
             </li>
-            <li class="list-group-item sidebar-list-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="/forget-password" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/key.svg') }}" class="img-fluid" alt="">
                     လျှို့ဝှတ်နံပါတ်ပြောင်းရန်
                 </a>
             </li>
-            <li class="list-group-item sidebar-list-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="/welcome-code" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/coupon.svg') }}" class="img-fluid" alt="">
                     မိတ်ဆက်ကုဒ်
                 </a>
             </li>
             @auth
-            <li class="list-group-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <form action="{{ route('user.logout') }}" method="POST">
                     @csrf
-                    @method('POST')
                     <button type="submit" class="btn text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/logout.svg') }}" class="img-fluid" alt="">
                     ထွက်မယ်
@@ -63,13 +62,13 @@
                 </form>
             </li>
             @else
-            <li class="list-group-item mb-1 border-0 bg-transparent" style="background: var(--sidebar-menu-color);">
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="/login" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/profile.svg') }}" class="img-fluid" alt="">
                     အကောင့်ဝင်ရန်
                 </a>
             </li>
-            @endauth
+            @endif
         </ul>
     </div>
 </div>

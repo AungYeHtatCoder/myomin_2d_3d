@@ -10,39 +10,40 @@
 </head>
 
 <body>
-  <div class="container overflow-hidden h-100">
+  <div class="container overflow-hidden">
     <div class="col-lg-6 col-md-10 mx-auto">
       <div class="row g-md-2">
         <!-- nav bar  -->
         @include('frontend.layouts.navbar')
         <!-- nav bar  -->
         <!-- content  -->
-        <div class="main-content position-relative overflow-hidden z-3">
+        <div class="main-content position-relative overflow-hidden">
           <!-- side bar  -->
           @include('frontend.layouts.sidebar')
           <!-- side bar  -->
           @yield('content')
+          
+          @include('frontend.layouts.footer')
         </div>
-        @include('frontend.layouts.footer')
       </div>
     </div>
   </div>
 
- <script src="{{ asset('./bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('./bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('./bootstrap/js/popper.min.js') }}"></script>
-<script src="{{ asset('./script.js') }}" type="text/javascript"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-  const body = document.body;
+  <script src="{{ asset('./bootstrap/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('./bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('./bootstrap/js/popper.min.js') }}"></script>
+  <script src="{{ asset('./script.js') }}" type="text/javascript"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.getElementById("hamburgerMenu");
+    const body = document.body;
 
-  hamburgerMenu.addEventListener("click", function() {
+    hamburgerMenu.addEventListener("click", function() {
     body.classList.toggle("show-sidebar");
+    });
   });
-});
 
-(function() {
+  (function() {
   const fetchData = () => {
     const url = "https://api.thaistock2d.com/live";
 

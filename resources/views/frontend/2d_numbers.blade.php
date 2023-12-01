@@ -1,7 +1,7 @@
 @extends('frontend.layouts.layout')
 @section('content')
           <!-- Winner result -->
-          <div class="row my-4" style="border: 1px solid gray;">
+          <div class="w-100 row my-4" style="border: 1px solid gray;">
             <div class="col-12 text-center text-white">
               <h1 class="text-warning" style="font-size: 90px;" id="live_2d">07</h1>
               <p>Updated: <span id="live_updated_time">10-0-2023 4:30:00PM</span></p>
@@ -10,7 +10,7 @@
           <!-- 2D list  -->
           <!-- <div class="row" style="margin-bottom: 80px;" id="result"></div> -->
           <!-- 2D Numbers lists -->
-          @include('frontend.2D_numbers_section')
+           @include('frontend.2D_numbers_section')
           <!-- Quick pickup numbers  -->
           <div class="position-fixed mx-auto">
             <div class=" quick_numbers">
@@ -161,7 +161,7 @@
               </form>
             </div>
           </div>
-          <!-- selected numbers  -->
+
       <!-- Modal with id="playtwod" -->
       <div class="modal fade" id="playtwod" tabindex="-1" aria-labelledby="playtwodLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -193,4 +193,6 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
 @endsection

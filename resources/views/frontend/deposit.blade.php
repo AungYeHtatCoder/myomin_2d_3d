@@ -1,7 +1,7 @@
 @extends('frontend.layouts.layout')
 @section('content')
           <!-- Subnav -->
-          <div class="w-100">
+          <div>
             <div class="text-white px-3 py-5 border-white border rounded-3">
               <h3>လက်ကျန်ငွေ:<sub class="ms-2">0.00 ကျပ်</sub></h3>
             </div>

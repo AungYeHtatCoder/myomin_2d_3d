@@ -1,6 +1,6 @@
 @extends('frontend.layouts.layout')
 @section('content')
-          <div class="w-100 my-4">
+          <div>
             <table class="table table-dark table-striped-columns">
               <tr>
                 <th>စဉ်</th>
@@ -15,10 +15,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{ asset('./assets/img/edit.svg') }}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{ asset('./assets/img/delete.svg') }}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -30,10 +30,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{ asset('./assets/img/edit.svg') }}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{ asset('./assets/img/delete.svg') }}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -45,10 +45,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -60,10 +60,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -75,10 +75,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -90,10 +90,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -105,10 +105,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -120,10 +120,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -135,10 +135,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -150,10 +150,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -165,10 +165,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -180,10 +180,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
@@ -195,10 +195,10 @@
                 <td>
                   <form action="">
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/edit.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/edit.svg" class="img-fluid" alt="">
                     </a>
                     <a href="" class="btn-link text-decoration-none">
-                      <img src="{{asset('./assets/img/delete.svg')}}" class="img-fluid" alt="">
+                      <img src="../asset/img/delete.svg" class="img-fluid" alt="">
                     </a>
                   </form>
                 </td>
