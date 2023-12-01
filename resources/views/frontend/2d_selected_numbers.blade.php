@@ -1,6 +1,6 @@
 @extends('frontend.layouts.layout')
 @section('content')
-          <div>
+          <div class="w-100 my-4">
             <table class="table table-dark table-striped-columns">
               <tr>
                 <th>စဉ်</th>

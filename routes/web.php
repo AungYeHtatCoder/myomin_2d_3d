@@ -238,6 +238,10 @@ Route::get('/2d-numbers',function(){
   return view('frontend.2d_numbers');
 });
 
+Route::get('/2d-selected-numbers',function(){
+  return view('frontend.2d_selected_numbers');
+});
+
 Route::get('/forget-password',function(){
   return view('frontend.forget_password');
 });
