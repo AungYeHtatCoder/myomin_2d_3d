@@ -1,0 +1,57 @@
+<x-layout>
+  <div class="container overflow-hidden">
+    <div class="col-lg-6 col-md-10 mx-auto">
+      <div class="row g-md-2">
+        <!-- nav bar  -->
+        <x-navbar />
+        <!-- nav bar  -->
+        <div class="main-content position-relative overflow-hidden z-3 g-3">
+          <!-- side bar  -->
+          <x-sidebar />
+          <!-- side bar  -->
+
+          <!-- Subnav -->
+          <div class="d-flex flex-column justify-content-between">
+            <h4 class="text-center text-white my-3">အကောင့်ဝင်ရန်</h4>
+            <div class="my-3">
+              <form action="">
+                <div class="my-2">
+                  <input class="form-control" type="text" name="" placeholder="ဖုန်းနံပါတ် (သို့မဟုတ်) အီးမေးလ်">
+                </div>
+                <div class="my-2">
+                  <input class="form-control" type="text" name="" placeholder="လျှို့ဝှတ်နံပါတ်">
+                </div>
+                <div class="text-center my-3 d-flex justify-content-between">
+                  <button type="submit" class="btn btn-primary">ပြောင်းမည်</button>
+                  <a href="/register" class="btn btn-secondary text-white">အကောင့်ဖွင့်မည်</a>
+                  <a href="/forget-password" class="text-white">လျှို့ဝှတ်နံပါတ် မေ့နေပါသလား?</a>
+                </div>
+              </form>
+            </div>
+            <div class="text-white my-3">
+              <div class="">
+                <div class="my-3">
+                  <div class="bg-transparent border-0 text-white my-3">
+                    လျှို့ဝှတ်နံပါတ်
+                  </div>
+                  <div class="bg-transparent border-0 text-white my-3">
+                    ၁။ အကောင့်ဝင်ရန် အသုံးပြုရမည်။
+                  </div>
+                  <div class="bg-transparent border-0 text-white my-3">
+                    ၂။ ငွေထုတ်ယူရန် အသုံးပြုရမည်။
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <span class="text-warning mb-5">* အကောင့်လုံခြုံမူရှိစေရန် သင်၏ လျှို့ဝှတ်နံပါတ်ကို မည်သူ့ကိုမျှမပြောပါနဲ့။
+              *</span>
+          </div>
+        </div>
+        <!-- footer  -->
+        <x-footer />
+        <!-- footer  -->
+      </div>
+    </div>
+  </div>
+
+</x-layout>
