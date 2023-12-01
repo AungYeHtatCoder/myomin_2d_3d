@@ -1,14 +1,16 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
           <!-- Subnav -->
           <div class="d-flex flex-column justify-content-between">
             <h4 class="text-center text-white my-3">အကောင့်ဝင်ရန်</h4>
             <div class="my-3">
-              <form action="">
+              <form action="{{ route('user.login.form.submit') }}" method="POST">
+                @csrf
                 <div class="my-2">
-                  <input class="form-control" type="text" name="" placeholder="ဖုန်းနံပါတ် (သို့မဟုတ်) အီးမေးလ်">
+                  <input class="form-control" type="text" name="credential" placeholder="ဖုန်းနံပါတ် (သို့မဟုတ်) အီးမေးလ်">
                 </div>
                 <div class="my-2">
-                  <input class="form-control" type="text" name="" placeholder="လျှို့ဝှတ်နံပါတ်">
+                  <input class="form-control" type="password" name="password" placeholder="လျှို့ဝှတ်နံပါတ်">
                 </div>
                 <div class="text-center my-3 d-flex justify-content-between">
                   <button type="submit" class="btn btn-primary">ပြောင်းမည်</button>
@@ -35,4 +37,4 @@
             <span class="text-warning mb-5">* အကောင့်လုံခြုံမူရှိစေရန် သင်၏ လျှို့ဝှတ်နံပါတ်ကို မည်သူ့ကိုမျှမပြောပါနဲ့။
               *</span>
           </div>
-        </x-layout>
+   @endsection

@@ -28,7 +28,7 @@
               </a>
             </div>
             <div class="bg-transparent border-0 col-md-2 mb-3">
-              <a href="/profile" class="text-white text-decoration-none d-flex flex-column justify-content-center align-items-center">
+              <a href="/user-profile" class="text-white text-decoration-none d-flex flex-column justify-content-center align-items-center">
                 <div>
                   <img src="{{ asset('./assets/img/profile.svg') }}" class="img-fluid rounded-top" alt="">
                 </div>

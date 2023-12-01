@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
     <div>
         <div id="myCarousel" class="carousel slide z-n1" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -141,4 +142,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+@endsection

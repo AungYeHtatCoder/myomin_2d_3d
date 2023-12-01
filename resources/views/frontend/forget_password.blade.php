@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
           <!-- Subnav -->
           <div>
             <h4 class="text-center text-white my-3">လျှို့ဝှတ်နံပါတ်ပြောင်းရန်</h4>
@@ -30,4 +31,4 @@
             <span class="text-warning">* အကောင့်လုံခြုံမူရှိစေရန် သင်၏ လျှို့ဝှတ်နံပါတ်ကို မည်သူ့ကိုမျှမပြောပါနဲ့။
               *</span>
           </div>
-</x-layout>
+@endsection

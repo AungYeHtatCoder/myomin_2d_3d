@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
          <!-- Subnav -->
           <div class="shadow rounded-4">
             <div class="d-flex align-items-center my-3 p-3">
@@ -6,8 +7,8 @@
                 <img src="{{ asset('./assets/img/profile.svg') }}" class="img-fluid" alt="" style="width: 50px;">
               </div>
               <div class="d-flex flex-column text-white ms-3">
-                <span>Aung Myint Thu</span>
-                <span>လက်ကျန်ငွေ: 0 ကျပ်</span>
+                <span>{{ Auth::user()->name }}u</span>
+                <span>လက်ကျန်ငွေ: &nbsp;<span class="fs-3 text-warning">{{ Auth::user()->balance }}</span> ကျပ်</span>
               </div>
             </div>
             <div class="d-flex justify-content-around py-4 mb-4">
@@ -80,4 +81,4 @@
             </div>
           </div>
   </div>
-</x-layout>
+@endsection

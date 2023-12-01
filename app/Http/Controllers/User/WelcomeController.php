@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use GuzzleHttp\Client;
 use App\Models\Admin\Banner;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Admin\Lottery;
 use App\Models\Admin\TwoDigit;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Hash;
 use GuzzleHttp\Exception\RequestException;
 
 class WelcomeController extends Controller
@@ -56,22 +58,24 @@ class WelcomeController extends Controller
 
     public function index()
     {
-        $banners = Banner::latest()->take(3)->get();
-        //$twoDigits = TwoDigit::all();
-        $client = new Client();
 
-        try {
-            $response = $client->request('GET', 'https://api.thaistock2d.com/live');
-            $data = json_decode($response->getBody(), true);
-        } catch (RequestException $e) {
-            // Log the error or inform the user
-            $data = []; // or provide a default value
-        }
-        if (request()->ajax()) {
-            return response()->json($data);
-        }
+        return view('index');
+        // $banners = Banner::latest()->take(3)->get();
+        // //$twoDigits = TwoDigit::all();
+        // $client = new Client();
 
-        return view('welcome', compact('data', 'banners'));
+        // try {
+        //     $response = $client->request('GET', 'https://api.thaistock2d.com/live');
+        //     $data = json_decode($response->getBody(), true);
+        // } catch (RequestException $e) {
+        //     // Log the error or inform the user
+        //     $data = []; // or provide a default value
+        // }
+        // if (request()->ajax()) {
+        //     return response()->json($data);
+        // }
+
+        // return view('welcome', compact('data', 'banners'));
     }
 
     public function wallet()
@@ -383,10 +387,64 @@ class WelcomeController extends Controller
         return view('user_fillmoney');
     }
 
-    public function userLogin()
+    public function store(Request $request)
+    {
+        $data = request()->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|min:11|max:15',
+            'password'=>'required'
+        ]);
+
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'password' => bcrypt($data['password']),
+        ]);
+
+        if ($user) {
+            Auth::login($user);
+            return redirect('/home')->with('success', 'Logged In Successful.');
+        } else {
+            return redirect()->back()->with('error', 'Registration failed. Please try again.');
+        }
+    }
+
+    public function login()
     {
         return view('frontend.user-login');
     }
+
+    public function userLogin(Request $request)
+    {
+        $credentials = $request->validate([
+            'credential' => 'required',
+            'password' => 'required',
+        ]);
+
+        $user = User::where(function ($query) use ($credentials) {
+            $query->where('email', $credentials['credential'])
+                ->orWhere('phone', $credentials['credential']);
+        })->first();
+
+        if ($user && Hash::check($credentials['password'], $user->password)) {
+            // The passwords match, log in the user
+            Auth::login($user);
+            return redirect('/home');
+        }
+
+        // Invalid credentials, redirect back with errors
+        return redirect()->back()->withInput()->withErrors(['credential' => 'Invalid credentials']);
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        return redirect('/');
+    }
+
 
     public function userRegister()
     {

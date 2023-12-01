@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
           <!-- Subnav -->
           <div>
             <div class="text-white px-3 py-5 border-white border rounded-3">
@@ -36,4 +37,4 @@
               </ul>
             </div>
           </div>
- </x-layout>
+@endsection

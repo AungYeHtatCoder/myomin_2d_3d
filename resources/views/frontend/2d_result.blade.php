@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
     <!-- Winner result -->
     <div class="row my-4" style="border: 1px solid gray;">
         <div class="col-12 text-center text-white">
@@ -171,4 +172,4 @@
             </tr>
         </table>
     </div>
-</x-layout>
+@endsection

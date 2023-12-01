@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
 
           <!-- Subnav -->
           <div class="shadow bg-secondary rounded-4 text-center">
@@ -74,4 +75,4 @@
             </div>
           </div>
 
-  </x-layout>
+@endsection

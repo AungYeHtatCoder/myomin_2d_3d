@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
   <div class="container overflow-hidden">
     <div class="col-lg-6 col-md-10 mx-auto">
       <div class="row g-md-2">
@@ -213,4 +214,4 @@
       </div>
     </div>
   </div>
-</x-layout>
+@endsection

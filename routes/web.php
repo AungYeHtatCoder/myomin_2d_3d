@@ -28,7 +28,9 @@ use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/user-profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('home');
+Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/user-profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('home');
+Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->middleware('auth')->name('wallet');
 
 // Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
 
@@ -220,62 +222,58 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
 
 });
 
-Route::get('/',function(){
-  return view('index');
-});
+Route::get('/login', [WelcomeController::class, 'login'])->name('login');
+Route::post('/user/login/form/submit', [WelcomeController::class, 'userlogin'])->name('user.login.form.submit');
+
+Route::get('/register', [WelcomeController::class, 'register'])->name('register');
+Route::post('/user/register/form/submit', [WelcomeController::class, 'store'])->name('user.register.form.submit');
+
+Route::post('/user/logout', [WelcomeController::class, 'logout'])->name('user.logout');
 
 Route::get('/2d-3d-lottery-play',function(){
-  return view('2d_3d_lottery_play');
+  return view('frontend.2d_3d_lottery_play');
 });
 
 Route::get('/2d-numbers',function(){
-  return view('2d_numbers');
+  return view('frontend.2d_numbers');
 });
 
 Route::get('/forget-password',function(){
-  return view('forget_password');
-});
-
-Route::get('/login',function(){
-  return view('login');
+  return view('frontend.forget_password');
 });
 
 Route::get('/register',function(){
-  return view('register');
+  return view('frontend.register');
 });
 
 Route::get('/deposit',function(){
-  return view('deposit');
+  return view('frontend.deposit');
 });
 
 Route::get('/3d-history',function(){
-  return view('3d_history');
+  return view('frontend.3d_history');
 });
 
 Route::get('/3d-result',function(){
-  return view('3d_result');
+  return view('frontend.3d_result');
 });
 
 Route::get('/2d-history',function(){
-  return view('2d_history');
+  return view('frontend.2d_history');
 });
 
 Route::get('/2d-result',function(){
-  return view('2d_result');
+  return view('frontend.2d_result');
 });
 
 Route::get('/profile',function(){
-  return view('profile');
+  return view('frontend.profile');
 });
 
 Route::get('/promotion',function(){
-  return view('promotion');
-});
-
-Route::get('/wallet',function(){
-  return view('wallet');
+  return view('frontend.promotion');
 });
 
 Route::get('/welcome-code',function(){
-  return view('welcome_code');
+  return view('frontend.welcome_code');
 });

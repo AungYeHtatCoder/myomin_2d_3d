@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
           <div>
             <table class="table table-dark table-striped-columns">
               <tr>
@@ -204,4 +205,4 @@
               </tr>
             </table>
           </div>
-</x-layout>
+@endsection

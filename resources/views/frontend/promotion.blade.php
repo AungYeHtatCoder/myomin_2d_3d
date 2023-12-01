@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
           <!-- content  -->
           <div>
             <div class="d-flex flex-column mt-4">
@@ -53,4 +54,4 @@
             </div>
           </div>
 
-</x-layout>
+@endsection

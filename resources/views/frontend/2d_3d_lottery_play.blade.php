@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
 
           <!-- Subnav -->
           <div class="d-flex justify-content-around text-white shadow rounded-4 py-4 mb-4">
@@ -28,4 +29,4 @@
           <!-- 2D lists -->
           <div class="row" style="margin-bottom: 80px;" id="result"></div>
         </div>
-  </x-layout>
+@endsection

@@ -1,4 +1,5 @@
-<x-layout>
+@extends('frontend.layouts.layout')
+@section('content')
           <!-- Subnav -->
           <div class="my-5">
             <h4 class="text-center text-white my-3">မိတ်ဆက် ကုဒ်ကို ရယူရန် Agent ဖြင့်ဆက်သွယ်ပါ။</h4>
@@ -29,4 +30,4 @@
             <span class="text-warning">* အကောင့်လုံခြုံမူရှိစေရန် သင်၏ လျှို့ဝှတ်နံပါတ်ကို မည်သူ့ကိုမျှမပြောပါနဲ့။
               *</span>
           </div>
-  </x-layout>
+@endsection
