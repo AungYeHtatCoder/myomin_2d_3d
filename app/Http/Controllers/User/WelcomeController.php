@@ -78,6 +78,18 @@ class WelcomeController extends Controller
         // return view('welcome', compact('data', 'banners'));
     }
 
+    public function forgetPassword(){
+        return view('frontend.forget_password');
+    }
+
+    public function forgetPasswordForm(){
+        dd(request()->all());
+    }
+
+    public function profile(){
+        return view('frontend.user_profile');
+    }
+
     public function wallet()
     {
         return view('frontend.wallet');

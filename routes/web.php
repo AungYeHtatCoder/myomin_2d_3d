@@ -28,9 +28,23 @@ use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
-Route::get('/user-profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('home');
-Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->middleware('auth')->name('wallet');
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/user-profile', [WelcomeController::class, 'profile'])->middleware('auth')->name('home');
+Route::get('/wallet', [WelcomeController::class, 'wallet'])->middleware('auth')->name('wallet');
+Route::get('/forget-password', [WelcomeController::class, 'forgetPassword'])->middleware('guest')->name('forgetPassword');
+Route::post('user/forget/password/form/submit', [WelcomeController::class, 'forgetPasswordForm'])->middleware('auth')->name('user.forget.password.form.submit');
+
+Route::post('user.password.change.form.submit', [WelcomeController::class, 'changePassword'])->middleware('auth')->name('user.password.change.form.submit');
+
+
+Route::get('/login', [WelcomeController::class, 'login'])->name('login');
+Route::post('/user/login/form/submit', [WelcomeController::class, 'userlogin'])->name('user.login.form.submit');
+
+Route::get('/register', [WelcomeController::class, 'register'])->name('register');
+Route::post('/user/register/form/submit', [WelcomeController::class, 'store'])->name('user.register.form.submit');
+
+Route::post('/user/logout', [WelcomeController::class, 'logout'])->name('user.logout');
+
 
 // Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
 
@@ -222,16 +236,12 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
 
 });
 
-Route::get('/login', [WelcomeController::class, 'login'])->name('login');
-Route::post('/user/login/form/submit', [WelcomeController::class, 'userlogin'])->name('user.login.form.submit');
-
-Route::get('/register', [WelcomeController::class, 'register'])->name('register');
-Route::post('/user/register/form/submit', [WelcomeController::class, 'store'])->name('user.register.form.submit');
-
-Route::post('/user/logout', [WelcomeController::class, 'logout'])->name('user.logout');
-
 Route::get('/2d-3d-lottery-play',function(){
   return view('frontend.2d_3d_lottery_play');
+});
+
+Route::get('/change-password',function(){
+  return view('frontend.change_password');
 });
 
 Route::get('/2d-numbers',function(){

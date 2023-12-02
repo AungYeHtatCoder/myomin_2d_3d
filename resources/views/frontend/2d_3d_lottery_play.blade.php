@@ -2,7 +2,7 @@
 @section('content')
 
           <!-- Subnav -->
-          <div class="d-flex justify-content-around text-white shadow rounded-4 py-4 mb-4">
+          <div class="w-100 d-flex justify-content-around text-white shadow rounded-4 py-4 mb-4">
             <a href="/2d-history" class="text-center text-white text-decoration-none text-white">
               <img src="{{ asset('./assets/img/history.svg') }}" class="img-fluid" alt="">
               <p class="mb-0">မှတ်တမ်း</p>

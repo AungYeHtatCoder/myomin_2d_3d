@@ -40,18 +40,18 @@
                 </a>
             </li>
             <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
-                <a href="/forget-password" class="text-decoration-none text-white">
-                    <img src="{{ asset('./assets/img/key.svg') }}" class="img-fluid" alt="">
-                    လျှို့ဝှတ်နံပါတ်ပြောင်းရန်
-                </a>
-            </li>
-            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <a href="/welcome-code" class="text-decoration-none text-white">
                     <img src="{{ asset('./assets/img/coupon.svg') }}" class="img-fluid" alt="">
                     မိတ်ဆက်ကုဒ်
                 </a>
             </li>
             @auth
+            <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
+                <a href="/change-password" class="text-decoration-none text-white">
+                    <img src="{{ asset('./assets/img/key.svg') }}" class="img-fluid" alt="">
+                    လျှို့ဝှတ်နံပါတ်ပြောင်းရန်
+                </a>
+            </li>
             <li class="list-group-item mb-1 border-0 bg-transparent sidebar-list-item">
                 <form action="{{ route('user.logout') }}" method="POST">
                     @csrf
