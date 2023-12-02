@@ -244,6 +244,18 @@ Route::get('/change-password',function(){
   return view('frontend.change_password');
 });
 
+Route::get('/kpay-top-up',function(){
+  return view('frontend.kpay_top_up');
+});
+
+Route::get('/kpay-withdraw',function(){
+  return view('frontend.kpay_withdraw');
+});
+
+Route::get('/withdraw-history',function(){
+  return view('frontend.widthdraw_history');
+});
+
 Route::get('/2d-numbers',function(){
   return view('frontend.2d_numbers');
 });

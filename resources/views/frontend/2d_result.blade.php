@@ -1,14 +1,14 @@
 @extends('frontend.layouts.layout')
 @section('content')
     <!-- Winner result -->
-    <div class="row my-4" style="border: 1px solid gray;">
+    <div class="w-100 row my-4" style="border: 1px solid gray;">
         <div class="col-12 text-center text-white">
             <h1 class="text-warning" style="font-size: 90px;" id="live_2d">07</h1>
             <p>Updated: <span id="live_updated_time">10-0-2023 4:30:00PM</span></p>
         </div>
     </div>
 
-    <div>
+    <div class="w-100">
         <table class="table table-white">
             <h5 class="text-center text-white">2023-11-21(Tuesday)</h5>
             <thead>

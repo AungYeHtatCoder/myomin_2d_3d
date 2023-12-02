@@ -1,7 +1,7 @@
 @extends('frontend.layouts.layout')
 @section('content')
          <!-- Subnav -->
-          <div class="shadow rounded-4">
+          <div class="w-100 shadow rounded-4">
             <div class="d-flex align-items-center my-3 p-3">
               <div>
                 <img src="{{ asset('./assets/img/profile.svg') }}" class="img-fluid" alt="" style="width: 50px;">
@@ -16,11 +16,11 @@
                 <img src="{{ asset('./assets/img/arrow_down.svg') }}" class="img-fluid" alt="">
                 <p class="mb-0">ငွေဖြည့်</p>
               </a>
-              <a href="/deposite" class="text-center text-white text-decoration-none">
+              <a href="/kpay-withdraw" class="text-center text-white text-decoration-none">
                 <img src="{{ asset('./assets/img/arrow_up.svg') }}" class="img-fluid" alt="">
                 <p class="mb-0">ငွေထုတ်</p>
               </a>
-              <a href="" class="text-center text-white text-decoration-none">
+              <a href="/withdraw-history" class="text-center text-white text-decoration-none">
                 <img src="{{ asset('./assets/img/history.svg') }}" class="img-fluid" alt="">
                 <p class="mb-0">မှတ်တမ်း</p>
               </a>
